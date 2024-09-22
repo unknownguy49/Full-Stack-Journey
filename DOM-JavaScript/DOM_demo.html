@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM Demo</title>
+    </head>
+    <body style="margin:0;">
+        <div id="container">
+            <h1>Hello World!</h1>
+            <p class="intro">Welcome to DOM Manipulation Demo</p>
+            <p class="content">Hope you are doing great</p>
+        </div>
+
+        <script>
+            const heading = document.getElementById('container');
+            const introParagraph = document.querySelector('intro');
+            const contentParagraph = document.querySelectorAll('.content');
+
+            heading.style.backgroundColor = 'black';
+            heading.style.color = 'white';
+
+            introParagraph.textContent = "DOM Manipulation is easy.";
+
+            contentParagraph.forEach(paragraph => {
+                paragraph.style.fontWeight = 'bold';
+            });
+            
+        </script>
+    </body>
+</html>
