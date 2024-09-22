@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex Hands-On</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flex_responsive.css">
+
+    <style>
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            border: 2px solid red;
+        }
+
+        .flex-container2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            border: 2px solid red;
+        }
+
+        .toy1{
+            margin: 10px;
+            padding: 20px;
+            background-color: lightblue;
+        }
+
+        .toy2{
+            margin: 10px;
+            padding: 20px;
+            background-color: lightgreen;
+        }
+
+        .toy3{
+            margin: 10px;
+            padding: 20px;
+            background-color: lightcoral;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="toy1">Toy 1</div>
+        <div class="toy2">Toy 2</div>
+        <div class="toy3">Toy 3</div>
+    </div>
+    <br>
+    <div class="flex-container2">
+        <div class="toy1">Toy 1</div>
+        <div class="toy2">Toy 2</div>
+        <div class="toy3">Toy 3</div>
+    </div>
+</body>
+</html>
