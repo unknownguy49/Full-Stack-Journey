@@ -1,0 +1,301 @@
+body{
+    font-family: Poppins, sans-serif;
+    margin: auto;
+    color: auto;
+    line-height: 1.4;
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+}
+
+header{
+    color: #fff;
+    background: linear-gradient(to right, #ff4b4b, #4258ff);
+    padding: 15px 0;
+    line-height: 1;
+}
+
+p {
+    font-weight:500;
+}
+
+a {
+    text-decoration:none;
+}
+
+.links:hover{
+    color:#ff2727;
+    text-decoration: underline;
+}
+
+section{
+    padding:10px;
+}
+
+footer{
+    font-size: large;
+    padding: 20px;
+    color:#fff;
+    background: linear-gradient(to right, #000000, #4f4f4f);
+}
+
+.about-me img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+form{
+    max-width: 300px;
+    margin: 20px auto;
+    background: radial-gradient(hsl(155, 100%, 79%), #c0d6ff);
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea{
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"]{
+    padding: 10px 20px;
+    background-color: #0033ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover{
+    background-color: #ff2727;
+}
+
+hr{
+    width: 50%;
+    margin: 20px auto;
+    border-top: 1px solid #ccc;
+}
+
+.icon-link{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 10px;
+    color: #fff;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.icon-link:hover{
+    transform: scale(1.1);
+}
+
+.email-icon{
+    background-color: #D44638;
+}
+
+.linkedin-icon{
+    background-color: #0077b5;
+}
+
+.instagram-icon{
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.github-icon{
+    background-color: #333;
+}
+
+.whatsapp-icon{
+    background-color: #25d366;
+}
+
+.skills-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.skills-list li{
+    list-style-type: none;
+    background: linear-gradient(90deg, #ff9797, #78a7ff);
+    padding:10px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    animation: bounce 1s infinite alternate;
+}
+
+.skills-list li:hover{
+    background: linear-gradient(90deg, #ff4b4b, #4258ff);
+    color: #fff;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .skills-list {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header, footer {
+        padding: 15px;
+    }
+
+    section, form {
+        width: calc(100% - 20px);
+        margin: 10px auto;
+    }
+
+    .icon-link {
+        width: 40px;
+        height: 40px;
+        margin: 0 5px;
+    }
+
+    h1, h2 {
+        font-size: 16px;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea{
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+
+    }
+
+    form input[type="submit"]:hover{
+        background-color: #ff2727;
+    }
+}
+
+@keyframes bounce{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-10px);
+    }
+}
+
+.horizontal-scroll {
+    width: 40%;
+    margin: 0 auto; /* Center the scrolling container */
+    overflow-x: hidden;
+}
+
+.icon-container {
+    display: flex;
+    animation: scrollAnimation 10s linear infinite;
+    width: max-content;
+    justify-content: center;
+}
+
+.icon-container img{
+    width: 60px;
+    height: 60px;
+    margin-right: 40px;
+    border-radius: 50%;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+@keyframes scrollAnimation {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
+
+.dark-mode {
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+.dark-mode button {
+    background-color: #555;
+    color: #fff;
+}
+
+.dark-mode p {
+    color: #fff;
+}
+
+.dark-mode .skills-list li{
+    list-style-type: none;
+    background: linear-gradient(90deg, #ff4b4b, #4258ff);
+    color:#000000;
+    font-weight: 600;
+    padding:10px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    animation: bounce 1s infinite alternate;
+}
+
+.dark-mode .skills-list li:hover{
+    background: linear-gradient(90deg, #ff9797, #78a7ff);
+    color: #fff;
+    cursor: pointer;
+}
+
+.dark-mode .icon-container img{
+    box-shadow: 0 10px 15px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .links{
+    color: #3aadff;
+}
+
+.dark-mode .links:hover{
+    color: #ff6868;
+    text-decoration: underline;
+}
+
+.dark-mode form{
+    background: radial-gradient(hsl(155, 100%, 50%), #2f78ff);
+    padding: 20px;
+    color:#000000;
+    font-weight: 600;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.dark-mode form input[type="submit"]{
+    font-size: 15px;
+}
+
+.dark-mode footer{
+    background: linear-gradient(to bottom, #ffffff, #838383);
+}
+
+.dark-mode footer p{
+    color: #000000;
+}
+
+.dark-mode .about-me img{
+    box-shadow: 0 15px 20px rgba(255, 255, 255, 0.2);
+}
+
+.fas, .fab {
+    margin-right: 1px;
+    color: inherit;
+}
