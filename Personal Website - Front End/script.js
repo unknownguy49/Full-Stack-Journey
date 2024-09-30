@@ -1,6 +1,6 @@
 function changeHeaderText()
 {
-    const texts=["Tech Enthusiast.","Full Stack Developer.","Web Designer.","Cybersecurity Enthusiast.","Gamer."];
+    const texts=["Tech Enthusiast.","Web Developer.","Cybersecurity Enthusiast.","Gamer."];
     const typingSpeed=100;
     const erasingSpeed=50;
     const pauseTime=1500;
@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     darkModeToggle.addEventListener('click', () => {
         body.classList.toggle('dark-mode');
-        //const currentMode = body.classList.contains('dark-mode') ? 'Dark' : 'Light';
         darkModeToggle.querySelector('i').classList.toggle('fa-sun');
         darkModeToggle.querySelector('i').classList.toggle('fa-moon');
         darkModeToggle.querySelector('i').classList.toggle('light-mode'); 
@@ -76,3 +75,26 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(tech);
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+});
+
+const smoothScrollLink = document.querySelector('a[href="#targetSection"]');
+
+smoothScrollLink.addEventListener('click', function(e) {
+    e.preventDefault(); 
+
+    const targetSection = document.querySelector('#targetSection');
+
+    targetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+});
+

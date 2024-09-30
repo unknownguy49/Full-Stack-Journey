@@ -1,0 +1,386 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: auto;
+    color: auto;
+    line-height: 1.4;
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+}
+
+p {
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    padding: 10px;
+}
+
+footer {
+    font-size: large;
+    padding: 20px;
+    color: #fff;
+    background: linear-gradient(to right, #000000, #4f4f4f);
+}
+
+@media only screen and (max-width: 768px) {
+    #projects {
+        padding-left: 50px;
+        padding-right: 50px;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    footer {
+        padding: 15px;
+    }
+
+    section {
+        width: calc(100% - 20px);
+        margin: 10px auto;
+    }
+
+    .icon-link {
+        width: 40px;
+        height: 40px;
+        margin: 0 5px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
+
+#projects {
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+    padding-left: 350px;
+    padding-right: 350px;
+    padding-bottom: 50px;
+}
+
+.project-thumbnail {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.project-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.thumbnail-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.thumbnail-content img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.thumbnail-content h3 {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.thumbnail-content p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.thumbnail-content .btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #831bcd;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.thumbnail-content .btn:hover {
+    background-color: #f9620b;
+}
+
+@media screen and (min-width: 601px) {
+    #projects {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .project-thumbnail {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    #projects {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding: 0 40px;
+    }
+
+    .project-thumbnail {
+        width: 100%;
+    }
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px 20px;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.nav-logo img {
+    height: 30px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5px;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.nav-menu a:hover {
+    transform: scale(1.1);
+}
+
+.nav-menu a, .nav-menu .resume-button {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+}
+
+.nav-menu .resume-button {
+    background-color: #831bcd;
+    color: #fff;
+}
+
+.resume-button:hover {
+    background-color: #f9620b;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-toggle i {
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    max-width: 80%;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.column {
+    flex: 1 1 45%;
+    margin: 5px;
+    min-width: 250px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 50%;
+    padding: 10px;
+}
+
+.image-carousel img {
+    width: auto;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin-top: 10px;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.github-link i {
+    margin: 0;
+}
+
+.stop-scrolling {
+    overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-row {
+        flex-direction: column;
+    }
+
+    .column {
+        flex-basis: auto;
+        width: 100%;
+    }
+}
+
+.carousel-container {
+    width: 400px;
+    height: 200px;
+    position: relative;
+    overflow: hidden; 
+    margin: 0 auto; 
+    border: 1px solid #ccc;
+}
+
+.carousel-slide img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    object-fit: fill;
+    display: none;
+}
+
+.prev{
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-slide img.active {
+    display: block;
+}

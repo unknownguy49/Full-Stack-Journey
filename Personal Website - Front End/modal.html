@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modal viewer">
+    <title>Modal Viewer</title>
+    <link rel="stylesheet" href="modal_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="modal_script.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="modal.html" class="nav-logo">
+                <img src="assets/name2.png" alt="modal">
+            </a>
+            <div class="nav-toggle"><i class="fa-solid fa-bars"></i></div>
+        </div>
+        <div class="nav-menu">
+            <a href="modal.html">Home</a>
+            <a href="#pr">Projects</a>
+            <a href="assets/Resume.pdf" class="resume-button" download>Resume</a>
+        </div>
+    </nav>
+
+    <section id="pr" style="padding-top: 30px;">
+        <h2>My Projects</h2>
+        <p>Take a look at some of my Projects</p><br>
+        <section id="projects">
+            <div class="project-thumbnail">
+                <div class="thumbnail-content">
+                    <img src="assets/1.webp" alt="Project 1">
+                    <h3>Restaurant Management System</h3>
+                    <p>Java-based terminal application aimed at optimizing restaurant operations.</p>
+                    <a href="#" class="btn know-more" data-modal-target="#projectModal1">Know More</a>
+                </div>
+            </div>
+
+            <div class="project-thumbnail">
+                <div class="thumbnail-content">
+                    <img src="assets/2.webp" alt="Project 2">
+                    <h3>BotBuddy - An AI Chatbot</h3>
+                    <p style="padding-top: 28px;">An AI chatbot app using Python and Tkinter with the OpenAI API.</p>
+                    <a href="#" class="btn know-more" data-modal-target="#projectModal2">Know More</a>
+                </div>
+            </div>
+
+            <div class="project-thumbnail">
+                <div class="thumbnail-content">
+                    <img src="assets/3.webp" alt="Project 3">
+                    <h3>IntelliSearch - Mini Search Engine</h3>
+                    <p>Python-based mini search engine enabling text-based and image searches.</p>
+                    <a href="#" class="btn know-more" data-modal-target="#projectModal3">Know More</a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <br><br><br>
+    <footer>
+        <p>&copy; 2024 Dibyadyuti Dutta</p>
+    </footer>
+
+    <!-- Modals -->
+    <div id="projectModal1" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Restaurant Management System</h2>
+            <hr>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="column description">
+                        <p>Short Project Overview: Java-based terminal application aimed at optimizing restaurant operations.</p>
+                        <a href="https://github.com/unknownguy49/Restaurant-Management-System" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
+                    </div>
+                    <div class="column image-carousel">
+                        <div class="carousel-container">
+                            <div class="carousel-slide">
+                                <img src="assets/1.webp" alt="Project Image 1">
+                                <img src="assets/2.webp" alt="Project Image 2">
+                                <img src="assets/3.webp" alt="Project Image 3">
+                            </div>
+                            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+                            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>Project Details</h3>
+                        <ul>
+                            <li>Java-based terminal application aimed at optimizing restaurant operations.</li>
+                            <li>User-friendly design and seamless functionality.</li>
+                            <li>Facilitates table management, food ordering, billing and feedback system.</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3>Project Video</h3>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yourvideoid" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projectModal2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>BotBuddy - An AI Chatbot</h2>
+            <hr>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="column description">
+                        <p>Short Project Overview: An AI chatbot app using Python and Tkinter with the OpenAI API.</p>
+                        <a href="https://github.com/yourgithubrepo" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
+                    </div>
+                    <div class="column image-carousel">
+                        <div class="carousel-container">
+                            <div class="carousel-slide">
+                                <img src="assets/2.webp" alt="Project Image 4">
+                                <img src="assets/3.webp" alt="Project Image 5">
+                                <img src="assets/1.webp" alt="Project Image 6">
+                            </div>
+                            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+                            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>Project Details</h3>
+                        <ul>
+                            <li>AI chatbot app.</li>
+                            <li>Using Python and Tkinter.</li>
+                            <li>Leverages the OpenAI API.</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3>Project Video</h3>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yourvideoid" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projectModal3" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>IntelliSearch - Mini Search Engine</h2>
+            <hr>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="column description">
+                        <p>Short Project Overview: Python-based mini search engine enabling text-based and image searches.</p>
+                        <a href="https://github.com/yourgithubrepo" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
+                    </div>
+                    <div class="column image-carousel">
+                        <div class="carousel-container">
+                            <div class="carousel-slide">
+                                <img src="assets/3.webp" alt="Project Image 7">
+                                <img src="assets/1.webp" alt="Project Image 8">
+                                <img src="assets/2.webp" alt="Project Image 9">
+                            </div>
+                            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+                            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>Project Details</h3>
+                        <ul>
+                            <li>Mini search engine.</li>
+                            <li>Developed using Python and Tkinter GUI library.</li>
+                            <li>Enables text-based and image searches.</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3>Project Video</h3>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yourvideoid" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
